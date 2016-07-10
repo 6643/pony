@@ -1,5 +1,3 @@
-use "debug"
-
 class Base64
   let _en_table: Array[U8]
   let _de_table: Array[U8]
@@ -102,7 +100,7 @@ class Base64
         while (si < src_len) and ((src(si) == '\n') or (src(si) == '\r'))  do
           si = si + 1
         end
-        
+
         if now == _pad_char then
           if (i == 0) or (i == 1) then error end
           if i == 2 then
